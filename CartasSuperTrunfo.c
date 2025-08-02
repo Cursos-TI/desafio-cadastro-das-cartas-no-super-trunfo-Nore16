@@ -1,10 +1,9 @@
 #include <stdio.h>
 
 struct carta {
-        char carta;
         char estado;
-        char codigo [4];
-        char nome_cidade [20];
+        char codigo [8];
+        char nome_cidade [50];
         int populacao;
         float area;
         float pib;
@@ -16,14 +15,18 @@ int main() {
 
     struct carta carta1, carta2;
        // Cadastrar carta 1
+       
     printf("Digite o estado: \n");
-    scanf("%c", &carta1.estado);
+    scanf(" %c", &carta1.estado);
 
     printf("Digite o codigo: \n");
-    scanf("%s", carta1.codigo);
+    scanf(" %s", carta1.codigo);
+
+    getchar();
 
     printf("Digite o nome_cidade: \n");
-    scanf("%s", carta1.nome_cidade);
+    getchar();
+    fgets(carta1.nome_cidade, sizeof(carta1.nome_cidade), stdin);
 
     printf("Digite a população: \n");
     scanf("%d", &carta1.populacao);
@@ -50,7 +53,8 @@ int main() {
     scanf(" %s", carta2.codigo);
 
     printf("Digite o nome_cidade: \n");
-    scanf("%s", carta2.nome_cidade);
+    getchar();
+    fgets(carta2.nome_cidade, sizeof(carta2.nome_cidade), stdin);
 
     printf("Digite a populacao: \n");
     scanf("%d", &carta2.populacao);
