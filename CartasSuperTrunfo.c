@@ -4,7 +4,7 @@ struct carta {
         char estado;
         char codigo [8];
         char nome_cidade [50];
-        int populacao;
+        unsigned long int populacao;
         float area;
         float pib;
         int pontos_turisticos;
@@ -25,11 +25,10 @@ int main() {
     getchar();
 
     printf("Digite o nome_cidade: \n");
-    getchar();
     fgets(carta1.nome_cidade, sizeof(carta1.nome_cidade), stdin);
 
     printf("Digite a população: \n");
-    scanf("%d", &carta1.populacao);
+    scanf("%lu", &carta1.populacao);
 
     printf("Digite a area: \n");
     scanf("%f", &carta1.area);
@@ -57,7 +56,7 @@ int main() {
     fgets(carta2.nome_cidade, sizeof(carta2.nome_cidade), stdin);
 
     printf("Digite a populacao: \n");
-    scanf("%d", &carta2.populacao);
+    scanf("%lu", &carta2.populacao);
 
     printf("Digite a area: \n");
     scanf("%f", &carta2.area);
@@ -76,7 +75,7 @@ int main() {
     printf("Estado: %c\n", carta1.estado);
     printf("codigo: %s\n", carta1.codigo);
     printf("Nome da Cidade: %s\n", carta1.nome_cidade);
-    printf("população: %d\n", carta1.populacao);
+    printf("população: %lu\n", carta1.populacao);
     printf("Área: %f\n", carta1.area);
     printf("Pib: %f\n", carta1.pib);
     printf("Pontos Turisticos: %d\n", carta1.pontos_turisticos);
@@ -87,7 +86,7 @@ int main() {
     printf("Estado: %c\n", carta2.estado);
     printf("codigo: %s\n", carta2.codigo);
     printf("Nome da Cidade: %s\n", carta2.nome_cidade);
-    printf("população: %d\n", carta2.populacao);
+    printf("população: %lu\n", carta2.populacao);
     printf("Área: %f\n", carta2.area);
     printf("Pib: %f\n", carta2.pib);
     printf("Pontos Turisticos: %d\n", carta2.pontos_turisticos);
